@@ -23,6 +23,10 @@ body{
    -webkit-hyphenate-limit-after: 3;
 }
 
+nav{
+   text-align: right;
+}
+
 
 h1{
    font-family: ff-real-headline-pro-2, sans-serif;
