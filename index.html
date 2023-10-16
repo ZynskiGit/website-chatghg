@@ -7,7 +7,65 @@
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
     <style>
-        /* CSS goes here */
+        /* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: ##ffffff;  /* Primary Color */
+    background-color: #0a0a0a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Website Title */
+h1 {
+    color: #ffffff;  /* Secondary Color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Introduction Text */
+.intro-text {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #ffffff;  /* Primary Color */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Section Headers */
+.section-header {
+    font-size: 24px;
+    margin-top: 30px;
+    border-bottom: 2px solid #ffffff;  /* Accent Color */
+}
+
+/* Figure Descriptions */
+.figure-description {
+    font-style: italic;
+}
+
+/* Insights Text */
+.insights-text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Conclusion */
+.conclusion-text {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #ffffff;  /* Accent Color */
+    color: #a50000;  /* Primary Color */
+    border-radius: 5px;
+}
+
+/* References */
+.reference-text {
+    margin-top: 10px;
+}
+
     </style>
 </head>
 <body>
@@ -39,27 +97,53 @@ The intended audience spans from internal stakeholders, such as students and fac
 
     <!-- Section 3 (Building CO2 Emissions per SqFt/yr) -->
     <h2 class="section-header">Building CO2 Emission per SqFt/yr</h2>
-    <img src="image/
+    <img src="image/GHG Emissions_BERDO2030 1.png" alt="Building CO2 Emission Stacked Bar Chart">
+    <p class="figure-description">Are we currently meeting the BERDO2030 requirements? Where does Northeastern stand in terms of building CO2 emissions? The legend provides a guide for readers to draw a relationship between the current kgCO2/SqFt/yr emissions by building level and the BERDO2030 progress bars.
+    <p class="insights-text">Based on this data, the building with the highest CO2 emissions is noted as ‘Egan Engineering Science Research Center’. Upon further calculations, roughly 27% of the buildings currently meet the requirements.
         
     <!-- Section 4 (Consumption Per Energy Source) -->
+    <h2 class="section-header">Consumption Per Energy Source/</h2>
+    <img src="image/NU Energy Consumption Over time line plot 1.png" alt="NU Energy Consumption Over Time Line Plot">
+    <p class="figure-description">This visualization illustrates the trending of Northeastern University’s energy sources over the last 16 years, as measured in mmBTUs (Metric Million British Thermal Unit,). 
+    <p class="insights-text">Oil use has been trending down significantly, while electricity usage has been trending up, taking a marked jump in 2014. This a good thing, as the University has taken great strides in electrifying campus buildings. Surprisingly, while natural gas use has risen, it is not by much. After 2015, there seems to be some relationship between gas and electricity sources, as they rise and fall in similar amounts. If we are to meet the City of Boston’s BERDO ordinance, natural gas would need to trend down while electricity usage continues to rise.
+
     <!-- Section 5 (Campus GHG Emissions) -->
+    <h2 class="section-header">Campus GHG Emissions</h2>
+    <img src="image/NU-ma-campus-ghg-emissions 1.png alt="NU Boston Campus GHG Emissions Bar Chart">
+    <p class="figure-description">Annually released emissions of carbon dioxide equivalents (MTCDE) measured in kilograms and metric tons per category. This is based on main campus emissions, which do not account for emissions on other Northeastern campuses outside of Massachusetts.
+    <p class="insights-text">Emitted CH4(kg) and N2O(kg) is proportionately less than emitted CO2(kg) on campus. This points our attention to the source - which buildings and the GHG emission intensity by building on campus (MA). 
+   
     <!-- Section 6 (Yearly Waste Disposition) -->
+    <h2 class="section-header">Yearly Waste Disposition</h2>
+    <img src="image/2019 Waste Disposition by Method.png alt="2019 Waste Disposition Pie Chart">
+    <img src="image/2020 Waste Disposition by Method.png alt="2020 Waste Disposition Pie Chart">
+    <img src="image/2021 Waste Disposition by Method.png alt="2021 Waste Disposition Pie Chart">
+    <img src="image/2022 Waste Disposition by Method.png alt="2022 Waste Disposition Pie Chart">
+    <p class="figure-description">Disposed consistently holds the majority percentage from 2019, indicating that more than half of waste is not recycled, composted, or donated/sold. On the other hand, the combination of composing and recycling is consistently growing across the years despite the dip in the single recycling category, indicating a growing efforts in these categories. However, waste that were diverted to donation/sale are still extremely low compared to the three other major categories, which could indicate a lack of infrastructure or policy to support this waste management pathway.
+    <p class="insights-text">placeholder text
+  
     <!-- Section 7 (Waste Type by Year) -->
+    <h2 class="section-header">Waste Type by Year</h2>
+    <img src="image/Material Waste & Dispostion Methods-2022 1.png alt="2022 Waste & Disposition Methods Heatmap">
+    <p class="figure-description">This plot shows the disposition of waste materials at Northeastern University over the past 4 years, broken down by the material types. We can see that proportionally, Trash disposal has continued to be the leading  overall disposition method.  
+    <p class="insights-text">Composting has taken a marked jump forward. After taking a dip in 2020, it has grown as a disposition method in both 2021 and 2022. Other/Mixed Recycling has grown the most within the Recycling category.
+  
     <!-- Section 8 (NU Waste and Recycling Methods Over Time) -->
+    <h2 class="section-header">NU Waste and Recycling Methods Over Time</h2>
+    <img src="image/Waste Disposition Over Time Bar graph.png alt= Yearly Waste Disposition Bar Chart">
+    <p class="figure-description">Placeholder text
+    <p class="insights-text">Placeholder text
 
-
-
-    
 
     <!-- Conclusion -->
     <h2 class="section-header">Conclusion</h2>
     <p class="conclusion-text">
-        [Your conclusion text here emphasizing NU's commitment to sustainability and the way forward.]
+        [placeholder]
     </p>
 
     <!-- References -->
     <h2 class="section-header">References</h2>
-    <p class="reference-text">1. Reference text here...</p>
+    <p class="reference-text">1. placeholder...</p>
 
 </body>
 </html>
