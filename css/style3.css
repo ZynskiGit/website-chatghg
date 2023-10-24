@@ -27,6 +27,12 @@ nav{
    text-align: right;
 }
 
+.navlink {
+   color: #ffffff;
+   text-decoration: none;
+   padding-right: 0.5em;
+}
+
 
 h1{
    font-family: ff-real-headline-pro-2, sans-serif;
