@@ -2,148 +2,242 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Husky EcoHub</title>
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;  /* Primary Color */
-    background-color: #0a0a0a;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-}
-
-/* Website Title */
-h1 {
-    color: #ffffff;  /* Secondary Color */
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Introduction Text */
-.intro-text {
-    font-size: 18px;
-    padding: 20px;
-    background-color: #ffffff;  /* Primary Color */
-    color: white;
-    border-radius: 5px;
-}
-
-/* Section Headers */
-.section-header {
-    font-size: 24px;
-    margin-top: 30px;
-    border-bottom: 2px solid #ffffff;  /* Accent Color */
-}
-
-/* Figure Descriptions */
-.figure-description {
-    font-style: italic;
-}
-
-/* Insights Text */
-.insights-text {
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-/* Conclusion */
-.conclusion-text {
-    font-size: 18px;
-    padding: 20px;
-    background-color: #ffffff;  /* Accent Color */
-    color: #a50000;  /* Primary Color */
-    border-radius: 5px;
-}
-
-/* References */
-.reference-text {
-    margin-top: 10px;
-}
-
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Etna', sans-serif;
+            background: url('image/homepage\ 2.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #B3FD71;
+        }
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 70px;
+            padding: 50px;
+        }
+        #menu-icon {
+            cursor: pointer;
+            color: #B3FD71;
+        }
+        .navbar-menu {
+            position: absolute;
+            top: 103px;
+            right: 165px;
+            font-size: 45px;
+            color: #B3FD71;
+            font-family: 'Etna Semibold', sans-serif;
+            display: none;
+            text-align: right;
+            z-index: 2;
+        }
+        .navbar-menu.active {
+            display: block;
+        }
+        .navbar-item {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none; /* Remove underline */
+            color: #B3FD71; /* Set text color */
+        }
+        .navbar-item:hover {
+            text-decoration: underline; /* Optional: add underline on hover */
+        }
+        .horizontal-menu {
+            display: none; /* Hide horizontal menu */
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .text-section {
+            max-width: 48%;
+            padding-left: 70px;
+        }
+        h1 {
+            font-family: 'Etna Black', 'Etna', sans-serif;
+            font-size: 140px;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        p {
+            font-family: 'Etna Bold', 'Etna', sans-serif;
+            font-size: 35px;
+            text-align: left;
+            text-justify: inter-word;
+        }
+        .image-section img {
+            width: 50vw;
+            height: auto;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7); 
+            pointer-events: none; 
+            z-index: -1; 
+        }
+        .get-involved {
+            position: absolute;
+            bottom: 30px;
+            right: 90px;
+            background-color: #B3FD71;
+            color: #004A98;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+            font-family: 'Etna Light', sans-serif;
+            width: 200px;
+            height: 35px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 25px
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 30px;
+            background-color: lightgray;
+            z-index: 10;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .popup h2 {
+            font-family: 'Etna', sans-serif;
+            margin-bottom: 30px;
+            color: black;
+            font-size: 35px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .input-group input, .popup input[type="email"], .popup button {
+            padding: 10px;
+            border: none;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-family: 'Etna Light', sans-serif;
+        }
+        .input-group input {
+            width: 48%;
+        }
+        .popup input[type="email"] {
+            width: 100%;
+        }
+        .popup button {
+            background-color: #004A98;
+            color: white;
+            cursor: pointer;
+            font-family: 'Etna', sans-serif;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 5;
+        }
+        .overlay.active {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .horizontal-menu {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 30px;
+            right: 180px;
+            font-size: 36px;
+        }
+        .horizontal-menu li {
+            margin-right: 20px;
+        }
+        .horizontal-menu a {
+            text-decoration: none;
+            color: #B3FD71;
+            font-family: 'Etna Semibold', sans-serif;
+        }
+        .horizontal-menu a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <nav onclick="toggleNavbar()">
+        <div id="menu-icon">&#9776;</div>
+    </nav>
+    
+    <div class="navbar-menu">
+        <a href="education.html" class="navbar-item">Education</a>
+        <a href="research.html" class="navbar-item">Research</a>
+        <a href="progress.html" class="navbar-item">Progress</a>
+        <a href="campusandcommunity.html" class="navbar-item">Campus & Community</a>
+        <a href="aboutus.html" class="navbar-item">About Us</a>
+    </div>
 
-    <!-- Website Title -->
-    <h1>Husky EcoHub</h1>
+    <div class="container">
+        <div class="text-section">
+            <h1>Husky<br>EcoHub</h1>
+            <p>Welcome to Husky EcoHub, your gateway to sustainability at Northeastern University! Explore our eco-initiatives, learn about our climate leadership, and join us in fostering a greener campus and community. Let's make a difference together!</p>
+        </div>
+    </div>
 
-    <!-- Introduction -->
-    <p class="intro-text">
-        [This website focuses on showcasing Northeastern University's (NU) efforts and progression in sustainability, aiming to bring to light its environmental achievements and aspirations in an accessible and comprehensive manner. The core objective is to highlight NU’s sustainability milestones, while also providing a clear picture of its adherence to established sustainability goals.
-It aims to be a cornerstone of information and inspiration, reinforcing our dedication to sustainability, and fostering a culture of environmental responsibility and engagement.
+    <div class="get-involved" onclick="togglePopup()">Get Involved</div>
 
-We investigate pivotal questions regarding the university’s sustainability trajectory and the performance efficacy of its buildings in terms of energy use and waste management. Utilizing data from various sustainability metrics, such as energy consumption, food waste, recycling, and general waste management, we aim to provide a clear and comprehensive view of NU's sustainability practices and identify areas that might benefit from additional focus and intervention. 
+    <div class="overlay" onclick="togglePopup()"></div>
 
-The intended audience spans from internal stakeholders, such as students and faculty, to the broader community, encompassing local residents, and businesses, and potentially extending to a regional audience in New England. The visualization of data is crafted to be intuitive and informative, offering a clear view of NU's sustainability practices and providing a platform that informs, engages, and potentially inspires enhanced sustainability practices within and beyond the NU community.]
-    </p>
+    <div class="popup">
+        <h2>Get Involved</h2>
+        <div class="input-group">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+        </div>
+        <input type="email" placeholder="Email">
+        <button onclick="togglePopup()">Submit</button>
+    </div>
 
-    <!-- Section 1 (SqFt vs Emissions) -->
-    <h2 class="section-header">SqFt vs Emissions</h2>
-    <img src="image/Yearly Percent Change SqFt vs Emissions Over Time.png" alt=“SqFt vs Emissions Line Chart">
-    <p class="figure-description">From this graph, we can observe how year over year since 2005, Northeastern’s campus has only grown in percentage of square footage. In contrast, we can see that year over year, Northeastern’s emissions have decreased more than they’ve increased in percentage.</p>
-    <p class="insights-text">Typically, you would expect a campus to increase emissions as the amount of land and buildings increases. Explanations for this include the replacement of natural gas over oil and newer or more renovated buildings that work more efficiently.</p>
+    <script>
+        function togglePopup() {
+            const popup = document.querySelector('.popup');
+            const overlay = document.querySelector('.overlay');
+            const isPopupVisible = popup.style.display === 'block';
 
-    <!-- Section 2 (Food Service History) -->
-    <h2 class="section-header">Food Service History</h2>
-    <img src="image/Food Waste history by Location.png" alt="Food Waste History by Location Box Plot">
-    <p class="figure-description">Looking at Northeastern’s food waste distribution, answers a lot of expected questions, and it creates some new ones. As we would expect, the IV loading dock and Stetson West Loading Dock (both dining halls) yield the highest distribution of food waste as both of their middle 50% indicators rise above most outliers of other areas.
-    <p class="insights-text">The large range of outliers at Speare may stem from different events. Surprisingly, Curry, while third, follows a fair bit behind in food waste from IV and Stetson West.
+            popup.style.display = isPopupVisible ? 'none' : 'block';
+            overlay.classList.toggle('active', !isPopupVisible);
+        }
 
-    <!-- Section 3 (Building CO2 Emissions per SqFt/yr) -->
-    <h2 class="section-header">Building CO2 Emission per SqFt/yr</h2>
-    <img src="image/GHG Emissions_BERDO2030 1.png" alt="Building CO2 Emission Stacked Bar Chart">
-    <p class="figure-description">Are we currently meeting the BERDO2030 requirements? Where does Northeastern stand in terms of building CO2 emissions? The legend provides a guide for readers to draw a relationship between the current kgCO2/SqFt/yr emissions by building level and the BERDO2030 progress bars.
-    <p class="insights-text">Based on this data, the building with the highest CO2 emissions is noted as ‘Egan Engineering Science Research Center’. Upon further calculations, roughly 27% of the buildings currently meet the requirements.
-        
-    <!-- Section 4 (Consumption Per Energy Source) -->
-    <h2 class="section-header">Consumption Per Energy Source/</h2>
-    <img src="image/NU Energy Consumption Over time line plot 1.png" alt="NU Energy Consumption Over Time Line Plot">
-    <p class="figure-description">This visualization illustrates the trending of Northeastern University’s energy sources over the last 16 years, as measured in mmBTUs (Metric Million British Thermal Unit,). 
-    <p class="insights-text">Oil use has been trending down significantly, while electricity usage has been trending up, taking a marked jump in 2014. This a good thing, as the University has taken great strides in electrifying campus buildings. Surprisingly, while natural gas use has risen, it is not by much. After 2015, there seems to be some relationship between gas and electricity sources, as they rise and fall in similar amounts. If we are to meet the City of Boston’s BERDO ordinance, natural gas would need to trend down while electricity usage continues to rise.
-
-    <!-- Section 5 (Campus GHG Emissions) -->
-    <h2 class="section-header">Campus GHG Emissions</h2>
-    <img src="image/NU-ma-campus-ghg-emissions 1.png alt="NU Boston Campus GHG Emissions Bar Chart">
-    <p class="figure-description">Annually released emissions of carbon dioxide equivalents (MTCDE) measured in kilograms and metric tons per category. This is based on main campus emissions, which do not account for emissions on other Northeastern campuses outside of Massachusetts.
-    <p class="insights-text">Emitted CH4(kg) and N2O(kg) is proportionately less than emitted CO2(kg) on campus. This points our attention to the source - which buildings and the GHG emission intensity by building on campus (MA). 
-   
-    <!-- Section 6 (Yearly Waste Disposition) -->
-    <h2 class="section-header">Yearly Waste Disposition</h2>
-    <img src="image/2019 Waste Disposition by Method.png alt="2019 Waste Disposition Pie Chart">
-    <img src="image/2020 Waste Disposition by Method.png alt="2020 Waste Disposition Pie Chart">
-    <img src="image/2021 Waste Disposition by Method.png alt="2021 Waste Disposition Pie Chart">
-    <img src="image/2022 Waste Disposition by Method.png alt="2022 Waste Disposition Pie Chart">
-    <p class="figure-description">Disposed consistently holds the majority percentage from 2019, indicating that more than half of waste is not recycled, composted, or donated/sold. On the other hand, the combination of composing and recycling is consistently growing across the years despite the dip in the single recycling category, indicating a growing efforts in these categories. However, waste that were diverted to donation/sale are still extremely low compared to the three other major categories, which could indicate a lack of infrastructure or policy to support this waste management pathway.
-    <p class="insights-text">placeholder text
-  
-    <!-- Section 7 (Waste Type by Year) -->
-    <h2 class="section-header">Waste Type by Year</h2>
-    <img src="image/Material Waste & Dispostion Methods-2022 1.png alt="2022 Waste & Disposition Methods Heatmap">
-    <p class="figure-description">This plot shows the disposition of waste materials at Northeastern University over the past 4 years, broken down by the material types. We can see that proportionally, Trash disposal has continued to be the leading  overall disposition method.  
-    <p class="insights-text">Composting has taken a marked jump forward. After taking a dip in 2020, it has grown as a disposition method in both 2021 and 2022. Other/Mixed Recycling has grown the most within the Recycling category.
-  
-    <!-- Section 8 (NU Waste and Recycling Methods Over Time) -->
-    <h2 class="section-header">NU Waste and Recycling Methods Over Time</h2>
-    <img src="image/Waste Disposition Over Time Bar graph.png alt= Yearly Waste Disposition Bar Chart">
-    <p class="figure-description">Placeholder text
-    <p class="insights-text">Placeholder text
-
-
-    <!-- Conclusion -->
-    <h2 class="section-header">Conclusion</h2>
-    <p class="conclusion-text">
-        [placeholder]
-    </p>
-
-    <!-- References -->
-    <h2 class="section-header">References</h2>
-    <p class="reference-text">1. placeholder...</p>
-
+        function toggleNavbar() {
+            const navbarMenu = document.querySelector('.navbar-menu');
+            navbarMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
