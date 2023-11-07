@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Husky EcoHub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Etna', sans-serif;
+            background: url('image/aboutus.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6); /* 40% transparency */
+            pointer-events: none; 
+            z-index: -1; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Etna Black', 'Etna', sans-serif;
+            font-size: 45px;
+            color: #B3FD71;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: 'Etna Light', 'Etna', sans-serif;
+            font-size: 20px;
+            max-width: 600px;
+        }
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 100px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            font-size: 70px;
+        }
+        #menu-icon {
+            cursor: pointer;
+            color: #B3FD71;
+        }
+        .navbar-menu {
+            display: none;
+            flex-direction: row;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 45px;
+            right: 150px;
+            white-space: nowrap;
+        }
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+        .navbar-menu a {
+            text-decoration: none;
+            font-size: 40px;
+            color: #B3FD71;
+            font-family: 'Etna Semibold', sans-serif;
+            font-size: 30px;
+        }
+        .navbar-menu a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            position: absolute;
+            top: 75px;
+            left: 60px;
+            font-family: 'Etna Black', 'Etna', sans-serif;
+            font-size: 50px;
+            color: #B3FD71;
+            text-decoration: none;  /* Remove underline from link */
+            line-height: 0.8;  /* Adjust line height for logo text */
+            z-index: 2;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <a href="index.html" class="logo">
+        Husky<br>EcoHub
+    </a>
+    <nav>
+        <span id="menu-icon" onclick="toggleNavbar()">&#9776;</span>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="visualization.html">Visualizations</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="campusandcommunity.html">Community</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Connect with people, campuses, & communities </h1>
+        <p>The Climate Justice and Sustainability Hub works with you to make connections that inspire solutions. We help connect you with student projects, teaching and research, community initiatives, campus operations, and capital investments to build partnerships and make meaningful changes with our neighboring communities and across our global university system. </p>
+    </div>
+    <script>
+        function toggleNavbar() {
+            const menu = document.getElementById('navbar-menu');
+            menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>
