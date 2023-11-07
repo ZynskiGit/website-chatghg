@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Husky EcoHub</title>
+    <link rel="stylesheet" href="css/education.css">
+    <style>
+        
+    </style>
+    </style>
+</head>
+<body>
+    <a href="index.html" class="logo">
+        Husky<br>EcoHub
+    </a>
+    <nav>
+        <span id="menu-icon" onclick="toggleNavbar()">&#9776;</span>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="progress.html">Progress</a></li>
+            <li><a href="campusandcommunity.html">Campus & Community</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>In the classroom, and beyond</h1>
+        <p>At Northeastern, learning is personalized and experiential, a perfect mix for tackling the thorny problems caused by climate change. You can create your academic path based on the problems you want to solve, integrating classroom learning with professional experiences—in research, service, policy, business—so deepening your knowledge, gaining new skills, and putting ideas into action toward the sustainability issues you care about.</p>
+    </div>
+    <script>
+        function toggleNavbar() {
+            const menu = document.getElementById('navbar-menu');
+            menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>

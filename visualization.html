@@ -1,0 +1,145 @@
+<title>Husky Progress</title>
+   <link rel="stylesheet" href="css/vis.css">
+   <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      </style>
+</head>
+
+<body>
+
+
+   <div class="container">
+       <!--This is your navigation-->
+       <div>
+         <a href="index.html" class="logo">
+            Husky<br>EcoHub
+        </a>
+         <nav>
+            <span id="menu-icon" onclick="toggleNavbar()">&#9776;</span>
+            <ul id="navbar-menu" class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualization.html">Visualizations</a></li>
+                <li><a href="campusandcommunity.html">Community</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+        <script>
+         function toggleNavbar() {
+             const menu = document.getElementById('navbar-menu');
+             menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+         }
+     </script>
+       </div>
+      
+      <!--This is a comment. Comments are not displayed in the browser-->
+      <div><img src="image/ChatGHG Banner.png" alt="Banner" style="width:300%"></div>
+      <div><p> Northeastern University is committed to inventing and demonstrating cutting-edge sustainability solutions, starting with our own campus and community. This website details our efforts on campus, our plans, and climate leadership. </p></div>
+
+      <h1 id="waste"> Waste Disposition </h1>
+      <img src="image/Waste Management in Tons.png" alt="image/Waste Management in Tons" style="width:300%">
+      <div class="image_captions"><i>NU Waste Management Disposition Over Time</i></div>
+      <div>Glickel, J. (2023). Waste & Recycling Summary. Boston; Northeastern University’s Climate Justice & Sustainability Hub. 
+      </div>
+     
+      <p>This plot shows the disposition of waste materials at Northeastern university over the past 4 years. Each point represents a waste material type (waste, cardboard, compost, textile, etc.).  
+         I was surprised to fin that although waste/trash disposition initially decreased in 2020, it has been trending upwards over the past few years. Similarly, recycling and composting  both took a significant dip in 2020 (recycling more than composting), and have been slowly edging back up, but are still yet to overtake the waste/trash as the highest disposition method. 
+         I believe it is likely that these two more sustainable disposition methods have seen growth due to various initiatives that the Northeastern’s Climate Justice & Sustainability Hub has put in place, like composting programs at the dining areas and dorms and increased community awareness.</p>
+
+   <div>
+      <img src="image/Waste Dispostion by Method 2019to2022.png" alt="Waste Disposition 2019 to 2022">
+   </div>
+<div class="image_captions"><i>Yearly Waste Dispostion</i> </div>
+<div>Glickel, J. (2023). Waste & Recycling Summary. Boston; Northeastern University’s Climate Justice & Sustainability Hub. 
+</div>
+<p>Disposed consistently holds the majority percentage from 2019, indicating that more than half of waste is not recycled, composted, or donated/sold. While on the other hand, the combination of composing and recycling is consistently growing across the years despite the dip in the single recycling category, indicating a growing efforts in these categories. However, waste that were diverted to donation/sale are still extremely low compared to the three other major categories, which could indicate a lack of infrastructure or policy to support this waste management pathway.</p>
+
+<img src="image/FoodServiceBreakdown.png" alt="Plot of Food Waste history by Location" style="width:300%">
+<div class="image_captions"><i>Food Service History, </i> </div>
+<div>Glickel, J. (2023). NU_Service_History. Boston; Northeastern University’s Dining Services Dept 
+</div>
+<p>Looking at Northeastern’s food waste distribution, it answers a lot of expected questions, and it creates some new ones. As we would expect, the IV loading dock and Stetson West Loading Dock (both dining halls) yield the highest distribution of food waste as both of their middle 50% indicators rise above most outliers of other areas. The large range of outliers at Speare may stem from different events. Surprisingly, Curry, while third, follows a fair bit behind in food waste from IV and Stetson West.</p>
+
+<img src="image/CurryFoodDensity.png" alt="Density Plot of Curry Food Waste Since January 2022" style="width:300%">
+<div class="image_captions"><i>Curry Student Center Food Breakdown </i> </div>
+<div>Glickel, J. (2023). NU_Service_History. Boston; Northeastern University’s Dining Services Dept 
+</div>
+<p>This density graph of the Curry Student Center waste since January 2022 seems to replicate the trends of most dining areas on campus. The cases where the average food waste was over 1000lbs were minimal. As the average waste decreased from 1000lbs, the number of days associated with the total average pounds increases until peaking at around 250lbs, where the trend then sharply decreases.</p>
+<div class="row">
+   <div class="column">
+     <img src="image/Compost.link.png" alt="Compost Link" style="width:100%">
+     <a href="https://facilities.northeastern.edu/materials-recycling/recycling/"><button class="button button1">Learn More</button></a>
+   </div>
+   <div class="column">
+     <img src="image/Recycling.link.png" alt="Recycling Link" style="width:100%">
+     <a href="https://facilities.northeastern.edu/materials-recycling/composting/"><button class="button button1">Learn More</button></a>
+     
+   </div>
+</div>
+
+  <h1 id="emissions"> Emissions </h1>
+
+<img src="image/GHG emissions.png" alt="Plot of GHG Emissions over time" style="width:300%">
+      <div class="image_captions"><i>Campus GHG Emissions </i> </div>
+      <div>Glickel, J. (2023). NU MA Campus GHG Inventory 2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub
+      </div>
+      <p>Annually released emissions of carbon dioxide equivalents (MTCDE) measured in kilograms and metric tons per category. This is based on main campus emissions, which do not account for emissions on other Northeastern campuses outside of Massachusetts.
+
+      <img  src="image/SqFt_Emissions.png" alt="Sq Ft and Emissions Over Time" style="width:300%">
+      <div class="image_captions"><i>NU SqFt vs Emissions </i> </div>
+      <div>Glickel, J. (2023). NU MA Campus GHG Inventory 2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub
+      </div>
+      <p>From this graph, we can observe how year over year since 2005, Northeastern’s campus has only grown in percentage of square footage. In contrast, we can see that year over year, Northeastern’s emissions have decreased more than they’ve increased in percentage. Typically, you would expect a campus to increase emissions as the amount of land and buildings increases. Explanations for this include the replacement of natural gas over oil and newer or more renovated buildings that work more efficiently.</p>
+      
+
+      <img src="image/Berdo2030.png" alt="Buildings with the worst GHG emissions" style="width:300%">
+      <div class="image_captions"><i>Building CO<sub>2</sub> Emissions per SqFt/Yr </i> </div>
+      <div>Glickel, J. (2023). NU Buildings Emissions Intensity 2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub
+      </div>
+      <p>Are we currently meeting the BERDO2030 requirements? Where does Northeastern stand in terms of building CO2 emissions? The legend provides a guide for readers to draw a relationship between the current kgCO2/SqFt/yr emissions by building level and the BERDO2030 progress bars.
+
+         Based on this data, the building with the highest CO2 emissions is noted as ‘Egan Engineering Science Research Center’. Upon further calculations, roughly 27% of the buildings currently meet the requirements.</p>
+
+         <h1> Energy Use and Consumption </h1>
+      <img src="image/Total University Energy Consumption Over Time.png" alt="Total University Energy Consumption Over Time" style="width:300%">
+      <div class="image_captions"><i>Total Northeastern University Energy Consumption Over Time </i> </div>
+      <div>Glickel, J. (2023). NU MA Campus - Energy Inventory -2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub 
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+
+         <img src="image/University Energy Sources & Consumption Over Time.png" alt="University Energy Consumption Over Time by Type" style="width:300%">
+      <div class="image_captions"><i>University Energy Consumption Over Time by Type </i> </div>
+      <div>Glickel, J. (2023). NU MA Campus - Energy Inventory -2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub 
+      </div>
+      <p>This visualization illustrates the trending of Northeastern University’s energy sources over the last 16 years, as measured in mmBTUs (Metric Million British Thermal Unit,). 
+
+         Oil use has been trending down significantly, while electricity usage has been trending up, taking a marked jump in 2014. This a good thing, as the University has taken great strides in electrifying campus buildings. Surprisingly, while natural gas use has risen, it is not by much. After 2015, there seems to be some relationship between gas and electricity sources, as they rise and fall in similar amounts. 
+         
+         If we are to meet the City of Boston’s BERDO ordinance, natural gas would need to trend down while electricity usage continues to rise.
+         </p>
+         <img src="image/Curry Student Center Energy Consumption Over Time.png" alt="CSC Energy Consumption Over Time" style="width:300%">
+         <div class="image_captions"><i>Curry Student Center Energy Consumption Over Time </i></div>
+         <div>Glickel, J. (2023). Building Level Energy Data. Boston; Northeastern University’s Climate Justice & Sustainability Hub 
+         </div>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+   
+
+     
+</body>
+
+</html>

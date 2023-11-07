@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Husky EcoHub</title>
+    <link rel="stylesheet" href="css/aboutus.css">
+    <style>
+    </style>
+    </style>
+</head>
+<body>
+    <a href="index.html" class="logo">
+        Husky<br>EcoHub
+    </a>
+    <nav>
+        <span id="menu-icon" onclick="toggleNavbar()">&#9776;</span>
+        <ul id="navbar-menu" class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="visualization.html">Visualizations</a></li>
+            <li><a href="campusandcommunity.html">Campus & Community</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Connect with people, campuses, & communities </h1>
+        <p>The Climate Justice and Sustainability Hub works with you to make connections that inspire solutions. We help connect you with student projects, teaching and research, community initiatives, campus operations, and capital investments to build partnerships and make meaningful changes with our neighboring communities and across our global university system. </p>
+    </div>
+    <script>
+        function toggleNavbar() {
+            const menu = document.getElementById('navbar-menu');
+            menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
+        }
+    </script>
+</body>
+</html>
