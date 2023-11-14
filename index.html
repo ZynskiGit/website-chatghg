@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Husky Progress</title>
-   <link rel="stylesheet" href="css/hub.css">
-   <style></style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Husky Progress</title>
+    <link rel="stylesheet" href="css/hub.css" />
+    <style></style>
+  </head>
 
-<body>
-   <nav onclick="toggleNavbar()">
-       <div id="menu-icon">&#9776;</div>
-   </nav>
-   
-   <div class="navbar-menu">
+  <body>
+    <nav onclick="toggleNavbar()">
+      <div id="menu-icon">&#9776;</div>
+    </nav>
+
+    <div class="navbar-menu">
       <a href="visualization.html" class="navbar-item">Visualization</a>
       <a href="campusandcommunity.html" class="navbar-item">Community</a>
       <a href="education.html" class="navbar-item">Education</a>
       <a href="aboutus.html" class="navbar-item">About Us</a>
-   </div>
+    </div>
 
-   <div class="container">
-       <div class="text-section">
-           <h1>Husky<br>EcoHub</h1>
-           <p>Welcome to Husky EcoHub, your gateway to sustainability at Northeastern University! Explore our eco-initiatives, learn about our climate leadership, and join us in fostering a greener campus and community. Let's make a difference together!</p>
-       </div>
-   </div>
+    <div class="container">
+      <div class="text-section">
+        <h1>Husky<br />EcoHub</h1>
+        <p>
+          Welcome to Husky EcoHub, your gateway to sustainability at
+          Northeastern University! Explore our eco-initiatives, learn about our
+          climate leadership, and join us in fostering a greener campus and
+          community. Let's make a difference together!
+        </p>
+      </div>
+    </div>
 
-   <div class="get-involved" onclick="togglePopup()">Get Involved</div>
+    <div class="get-involved" onclick="togglePopup()">Get Involved</div>
 
-   <div class="overlay" onclick="togglePopup()"></div>
+    <div class="overlay" onclick="togglePopup()"></div>
 
-   <div class="popup">
-       <h2>Get Involved</h2>
-       <div class="input-group">
-           <input type="text" placeholder="First Name">
-           <input type="text" placeholder="Last Name">
-       </div>
-       <input type="email" placeholder="Email">
-       <button onclick="togglePopup()">Submit</button>
-   </div>
+    <div class="popup">
+      <h2>Get Involved</h2>
+      <div class="input-group">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+      </div>
+      <input type="email" placeholder="Email" />
+      <button onclick="togglePopup()">Submit</button>
+    </div>
 
-   <script>
-       function togglePopup() {
-           const popup = document.querySelector('.popup');
-           const overlay = document.querySelector('.overlay');
-           const isPopupVisible = popup.style.display === 'block';
+    <script>
+      function togglePopup() {
+        const popup = document.querySelector(".popup");
+        const overlay = document.querySelector(".overlay");
+        const isPopupVisible = popup.style.display === "block";
 
-           popup.style.display = isPopupVisible ? 'none' : 'block';
-           overlay.classList.toggle('active', !isPopupVisible);
-       }
+        popup.style.display = isPopupVisible ? "none" : "block";
+        overlay.classList.toggle("active", !isPopupVisible);
+      }
 
-       function toggleNavbar() {
-           const navbarMenu = document.querySelector('.navbar-menu');
-           navbarMenu.classList.toggle('active');
-       }
-   </script>
-</body>
-
+      function toggleNavbar() {
+        const navbarMenu = document.querySelector(".navbar-menu");
+        navbarMenu.classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
