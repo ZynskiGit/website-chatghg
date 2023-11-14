@@ -152,6 +152,14 @@
             font-size: 30px;
             margin-bottom: 10px;
         }
+
+        .image_captions{
+            font-family: 'Etna Light', 'Etna', sans-serif;
+            font-size: 13px;
+            font-weight: medium;
+            margin-bottom: 0px;
+            color: white;
+}
     </style>
 </head>
 <body>
@@ -193,6 +201,7 @@
         </style>
     </div>
     
+    
     <!-- Waste Management Bar Chart section -->
     <div style="background-color: black; padding: 100px; padding-top: 1px; display: flex; align-items: center; justify-content: center;">
         <div class="chart-container">
@@ -204,7 +213,12 @@
                 <div class="chart-image">
                     <img src="image/Waste Bars.png" alt="Waste bar chart">
                 </div>
+            <!-- Caption -->
             </div>
+            <div class="image_captions" style="transform: translate(+80%, -200%);">
+            <div><i>NU Waste Management Disposition Over Time</i></div>
+        <div>Glickel, J. (2023). Waste & Recycling Summary. Boston; Northeastern University’s Climate Justice & Sustainability Hub. 
+        </div></div>
     
             <!-- Pie chart section -->
     <div class="chart-section" style="flex-direction: row-reverse;">
@@ -214,7 +228,12 @@
                 <div class="chart-image">
                     <img src="image/piecharts.png" alt="Waste pie chart">
                 </div>
+        <!-- caption -->
         </div>
+        <div class="image_captions" style="transform: translate(-50%, -50%)";>
+        <div><i>Yearly Waste Dispostion</i> </div>
+        <div>Glickel, J. (2023). Waste & Recycling Summary. Boston; Northeastern University’s Climate Justice & Sustainability Hub. 
+        </div></div>
         <!-- What about Food Service? -->
     <div class="section">
         <div style="display: flex; justify-content: flex-start; align-items: center; width: 100%; padding: 0 50px; gap: 20px;">
@@ -228,6 +247,11 @@
         <!-- Food Service History Section -->
         <div class="section" style="margin-bottom: 5px;"></div>
             <img src="image/NEWFoodServiceBreakdown.png" alt="Food Service History Chart" style="display: block; max-width: 100%; height: auto; margin-bottom: 5px;">
+        </div>
+        <div class="image_captions" style="transform: translate(-25%, -350%)";>
+        <div><i>Food Service History, </i> </div>
+        <div>Glickel, J. (2023). NU_Service_History. Boston; Northeastern University’s Dining Services Dept 
+        </div></div>
             <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
                 <div style="background-color: #B3FD71; color: black; border-radius: 40px; padding: 40px; font-family: 'Etna Bold', sans-serif; text-align: left; flex: 1;">
                     <p style="margin: 0;">
@@ -259,6 +283,10 @@
                     <p>Annual emissions are quantified in terms of carbon dioxide equivalents (CO2e), presented in both kilograms and metric tons. These statistics represent the main campus's output and exclude emissions from Northeastern University's additional campuses outside Massachusetts.</p>
                 </div>
             </div>
+            <div class="image_captions" style="transform: translate(-50%, -320%)";>
+                <div><i>Campus GHG Emissions, </i> </div>
+                <div>Glickel, J. (2023). NU MA Campus GHG Inventory 2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub 
+                </div></div>
 
         <!-- NU SqFt vs Emissions Section -->
         <div class="chart-container" id="ghg-emission-section">
@@ -272,6 +300,12 @@
                 </div>
             </div>
         </div>
+        <div class="image_captions" style="transform: translate(+10%, -300%);">
+            <div><i>NU Waste Management Disposition Over Time</i></div>
+        <div>Glickel, J. (2023). Waste & Recycling Summary. Boston; Northeastern University’s Climate Justice & Sustainability Hub. 
+        </div></div>
+    </div>
+    
 
         <!-- Berdo Section -->
         <div class="chart-container" id="ghg-emission-section">
@@ -284,6 +318,10 @@
                     <p>Is Northeastern on track with the BERDO2030 benchmarks for building emissions? An examination of the graph, where the darker green bars represent the BERDO2030 goals and the lighter green bars indicate current progress, reveals the university's position in reducing CO2 emissions. Notably, the 'Egan Engineering Science Research Center' stands out with the highest emission rates. However, a detailed analysis shows that approximately 27% of the buildings are already meeting the BERDO2030 standards, illustrating a commitment to sustainability and a push for further improvements.</p>
                 </div>
             </div>
+            <div class="image_captions" style="transform: translate(-40%, -100%)";>
+                <div><i>Food Service History, </i> </div>
+                <div>Glickel, J. (2023). NU_Service_History. Boston; Northeastern University’s Dining Services Dept 
+                </div></div>
         </div>
 
         <!-- Shifting Energy Subtitle Section -->
@@ -296,6 +334,14 @@
             <div class="chart-image" style="flex: 1; padding: 10px;">
                 <img src="image/Total Energy.png" alt="Total Energy" style="width: 100%; height: auto;">
             </div>
+            <div class="image_captions" style="transform: translate(-50%, -60%)";>
+                <div><i>Total Northeastern University Energy Consumption Over Time , </i> </div>
+                <div>Glickel, J. (2023). NU MA Campus - Energy Inventory -2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub  
+                </div></div>
+                <div class="image_captions" style="transform: translate(+65%, -160%)";>
+                    <div><i>University Energy Consumption Over Time by Type, </i> </div>
+                    <div>Glickel, J. (2023). NU MA Campus - Energy Inventory -2005-2022. Boston; Northeastern University’s Climate Justice & Sustainability Hub   
+                    </div></div>
 
         <div class="section">
             <p style="text-align: center; max-width: 1000px; margin: 20px auto; color: white;">
