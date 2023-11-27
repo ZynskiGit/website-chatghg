@@ -54,7 +54,7 @@ function draw() {
   if (appleMove > 2700) {
     appleMove = 0;
   }
-  if (mouseY < 300) { // if the mouse is within the black window, stop the apples
+  if (mouseY < 300 && mouseY > 100) { // if the mouse is within the black window, stop the apples
     appleMove = stop;
   }
   
