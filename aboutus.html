@@ -4,23 +4,187 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Husky EcoHub</title>
-    <link rel="stylesheet" href="css/aboutus.css">
+    <title>About Us - Sustainability Wrapped!</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Etna', sans-serif;
+            background: url('image/aboutus.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.6); /* 40% transparency */
+            pointer-events: none; 
+            z-index: -1; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Etna Black', 'Etna', sans-serif;
+            font-size: 45px;
+            color: #B3FD71;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family: 'Etna Light', 'Etna', sans-serif;
+            font-size: 20px;
+            max-width: 600px;
+        }
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 100px;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            font-size: 70px;
+        }
+        #menu-icon {
+            cursor: pointer;
+            color: #B3FD71;
+        }
+        .navbar-menu {
+            display: none;
+            flex-direction: row;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 45px;
+            right: 150px;
+            white-space: nowrap;
+        }
+        .navbar-menu li {
+            margin-left: 20px;
+        }
+        .navbar-menu a {
+            text-decoration: none;
+            font-size: 40px;
+            color: #B3FD71;
+            font-family: 'Etna Semibold', sans-serif;
+            font-size: 30px;
+        }
+        .navbar-menu a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            position: absolute;
+            top: 75px;
+            left: 60px;
+            font-family: 'Etna Black', 'Etna', sans-serif;
+            font-size: 50px;
+            color: #B3FD71;
+            text-decoration: none;  /* Remove underline from link */
+            line-height: 0.8;  /* Adjust line height for logo text */
+            z-index: 2;
+        }
+        .get-involved {
+            position: absolute;
+            bottom: 30px;
+            right: 90px;
+            background-color: #B3FD71;
+            color: #004A98;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 2;
+            font-family: 'Etna Light', sans-serif;
+            width: 200px;
+            height: 35px;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 25px
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 30px;
+            background-color: lightgray;
+            z-index: 10;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .popup h2 {
+            font-family: 'Etna', sans-serif;
+            margin-bottom: 30px;
+            color: black;
+            font-size: 35px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .input-group input, .popup input[type="email"], .popup button {
+            padding: 10px;
+            border: none;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-family: 'Etna Light', sans-serif;
+        }
+        .input-group input {
+            width: 48%;
+        }
+        .popup input[type="email"] {
+            width: 100%;
+        }
+        .popup button {
+            background-color: #004A98;
+            color: white;
+            cursor: pointer;
+            font-family: 'Etna', sans-serif;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 15px;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 5;
+        }
+        .overlay.active {
+            display: block;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     </style>
     </style>
 </head>
 <body>
     <a href="index.html" class="logo">
-        Husky<br>EcoHub
+        Sustainability<br>Wrapped!
     </a>
     <nav>
         <span id="menu-icon" onclick="toggleNavbar()">&#9776;</span>
         <ul id="navbar-menu" class="navbar-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="visualization.html">Visualizations</a></li>
-            <li><a href="campusandcommunity.html">Campus & Community</a></li>
+            <li><a href="index.html">Visualizations</a></li>
+            <li><a href="Education.html">Education</a></li>
+            <li><a href="campusandcommunity.html">Community</a></li>
         </ul>
     </nav>
 
@@ -34,5 +198,30 @@
             menu.style.display = menu.style.display === 'none' ? 'flex' : 'none';
         }
     </script>
+
+<div class="get-involved" onclick="togglePopup()">Get Involved</div>
+
+<div class="overlay" onclick="togglePopup()"></div>
+
+<div class="popup">
+    <h2>Get Involved</h2>
+    <div class="input-group">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+    </div>
+    <input type="email" placeholder="Email">
+    <button onclick="togglePopup()">Submit</button>
+</div>
+
+<script>
+    function togglePopup() {
+        const popup = document.querySelector('.popup');
+        const overlay = document.querySelector('.overlay');
+        const isPopupVisible = popup.style.display === 'block';
+
+        popup.style.display = isPopupVisible ? 'none' : 'block';
+        overlay.classList.toggle('active', !isPopupVisible);
+    }
+</script>
 </body>
 </html>
