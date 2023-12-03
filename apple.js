@@ -14,6 +14,9 @@ class Apple {
         push();
         translate(appleMove + this.x, this.y);
         fill(204 * (this.com_efficiency/10), 55 - (15/this.com_efficiency * 2), 51 - (15/this.com_efficiency * 2));
+        if (this.com_efficiency > 50) {
+          fill(255, 255, 51);
+        }
         ellipseMode(CENTER);
         ellipse(0, 0, 50, 75);
         rotate(10);
@@ -31,6 +34,9 @@ class Apple {
         noStroke();
         rotate(20);
         fill(39, 166, 21); // green
+        if (this.com_efficiency > 50) {
+          fill(255, 255, 51);
+        }
         ellipse(40, 50, 15, 40) //leaf
         pop();
 

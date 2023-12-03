@@ -2,11 +2,13 @@
 let table;
 let firstTen = 30;
 let apples = [];
+let font;
 
 function preload() {
   // my table is comma separated value "csv"
   // and has a header specifying the columns labels
   table = loadTable('./assets/compost_efficiency_data.csv', 'csv', 'header');
+  // font = loadFont('https://use.typekit.net/raz5lhd.css');
 }
 
 let appleMove = 0;
@@ -15,6 +17,7 @@ let cnv;
 function setup() {
   cnv = createCanvas(windowWidth, 500);
   background(255, 255, 255);
+  textFont("Navigo");
   textSize(12);
   noStroke();
   cnv.parent("sketch-container");
