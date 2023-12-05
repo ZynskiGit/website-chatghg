@@ -51,7 +51,7 @@ function draw() {
   //apples
   let stop = appleMove;
   appleMove = appleMove + 1.5
-  if (appleMove > 2700) {
+  if (appleMove > 2900) {
     appleMove = 0;
   }
   if (mouseY < 300 && mouseY > 100) { // if the mouse is within the black window, stop the apples
@@ -87,6 +87,7 @@ function stats(Apple) {
   let compost_efficiency = Apple.com_efficiency;
   let x = Apple.x;
   let y = Apple.y;
+  textFont("Navigo");
   text('Area: ' + name + '\n' + 'Trash in tons: ' + trash_tons + '\n' + 'Food in tons: ' + food_tons + '\n' + 'Compost/Trash: ' + 
   compost_efficiency, (windowWidth / 2), 350);
 }
@@ -94,16 +95,19 @@ function stats(Apple) {
 function citation() {
   fill('#B3FD71');
   textSize(10);
+  textFont("Navigo");
   text('Fairbrother, M. (2023, October 12). Municipal solid waste and recycling data. Massachussetts.', (windowWidth / 2), 490);
 }
 
 function title() {
   textSize(16);
+  textFont("Navigo");
   text('Who Are the Rotten Apples?', (windowWidth / 2), 50);
 }
 
 function disclaimer() {
   fill('#B3FD71');
   textSize(12);
+  textFont("Navigo");
   text('Compost efficiency = Food Composted (in tons) / Trash (in tons).', (windowWidth / 2), 470);
 }
